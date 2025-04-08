@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-vite-do-app",
+  "main": "./src/index.tsx",
+  "compatibility_date": "2025-04-03",
+  "assets": {
+    "directory": "./dist"
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "COUNTERS",
+        "class_name": "Counter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "Counter"
+      ]
+    }
+  ]
+}
