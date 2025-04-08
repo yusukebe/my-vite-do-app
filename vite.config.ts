@@ -29,7 +29,6 @@ export default defineConfig(({ command, isSsrBuild }) => {
     plugins: [
       build({
         outputDir: 'dist-server',
-        minify: false,
         entryContentAfterHooks: [
           ...(defaultOptions.entryContentAfterHooks ?? []),
           () => {
